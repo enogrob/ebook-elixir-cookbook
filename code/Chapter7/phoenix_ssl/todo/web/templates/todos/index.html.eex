@@ -1,0 +1,11 @@
+<div>
+ <h3>Views and Templates</h3>
+  <p>This is the template that will display only the task for each item in our todo list.</p>
+  <ol>
+    <p>TODO:</p>
+    <%= for t <- todos @conn do %>
+    <li><%= t %></li>
+  <% end %>
+  </ol>
+</div>
+

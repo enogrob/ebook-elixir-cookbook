@@ -1,0 +1,2 @@
+%{"geolix": {:git, "git://github.com/mneudert/geolix.git", "cf8c265f4403ee4aebb3e04b41e4ebd8b9ef377f", []},
+  "poolboy": {:hex, :poolboy, "1.4.2"}}

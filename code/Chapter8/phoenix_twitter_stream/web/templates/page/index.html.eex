@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-lg-12">
+    <ul id="tweets"></ul>
+  </div>
+
+  <script src="/js/phoenix.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    var my_track = "programming";
+    var socket = new Phoenix.Socket("ws://" + location.host + "/ws");
+    socket.join("tweets", {track: my_track}, function(chan){
+      chan.on("tweet:stream", function(message){
+        console.log(message);
+        $('#tweets').prepend($('<li>').text(message.text));
+        });
+    });
+  </script>
+</div>
