@@ -1,4 +1,0 @@
-SupervisedApp
-=============
-
-** TODO: Add description **

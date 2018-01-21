@@ -26,11 +26,11 @@ Table of Contents
 [x] Inspecting your system in IEx
 [x] Inspecting your system with Observer
 [x] Creating a simple application
-[ ] Managing dependencies
-[ ] Generating a supervised application
-[ ] Generating umbrella applications
-[ ] Managing application configuration
-[ ] Creating custom Mix tasks
+[x] Managing dependencies
+[x] Generating a supervised application
+[x] Generating umbrella applications
+[x] Managing application configuration
+[x] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
 [ ] Understanding immutability
 [ ] Adding and subtracting lists

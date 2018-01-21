@@ -1,2 +1,0 @@
-defmodule ManageDeps do
-end

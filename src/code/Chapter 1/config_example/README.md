@@ -1,4 +1,0 @@
-ConfigExample
-=============
-
-** TODO: Add description **

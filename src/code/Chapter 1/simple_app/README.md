@@ -1,4 +1,0 @@
-SimpleApp
-=========
-
-** TODO: Add description **
