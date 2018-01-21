@@ -18,14 +18,14 @@ This book is a set of recipes grouped by topic that acts as a good reference to 
 ```
 Table of Contents
 1: COMMAND LINE
-[ ] Introduction
-[ ] Using the terminal to prototype and test ideas
-[ ] Loading and compiling modules
-[ ] Getting help and accessing documentation within IEx
-[ ] Using Erlang from Elixir
-[ ] Inspecting your system in IEx
-[ ] Inspecting your system with Observer
-[ ] Creating a simple application
+[x] Introduction
+[x] Using the terminal to prototype and test ideas
+[x] Loading and compiling modules
+[x] Getting help and accessing documentation within IEx
+[x] Using Erlang from Elixir
+[x] Inspecting your system in IEx
+[x] Inspecting your system with Observer
+[x] Creating a simple application
 [ ] Managing dependencies
 [ ] Generating a supervised application
 [ ] Generating umbrella applications
