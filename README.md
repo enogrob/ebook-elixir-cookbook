@@ -37,8 +37,8 @@ Table of Contents
 [x] Combining tuples into a list
 [x] Creating and manipulating keyword lists
 [x] Using pattern matching
-[ ] Pattern matching an HTTPoison response
-[ ] Creating a key/value store with a map
+[x] Pattern matching an HTTPoison response
+[x] Creating a key/value store with a map
 [ ] Mapping and reducing enumerables
 [ ] Generating lazy (even infinite) sequences
 [ ] Streaming a file as a resource

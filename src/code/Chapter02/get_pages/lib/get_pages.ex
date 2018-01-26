@@ -6,15 +6,15 @@ defmodule GetPages do
         %{headers: headers} = fetch_url(url)
         headers
       :body ->
-        %{:body => body} = fetch_url(url)
+        %{body: body} = fetch_url(url)
         body
       _ ->
         IO.puts "Section unavailable or not known!"
     end
   end
 
-  defp fetch_url(url)  do
-    HTTPoison.get(url)
+  def fetch_url(url)  do
+    {:ok, response} = HTTPoison.get(url)
+    response
   end
-
 end
