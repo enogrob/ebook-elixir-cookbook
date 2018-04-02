@@ -22,23 +22,23 @@ Table of Contents
 [x] Using the terminal to prototype and test ideas
 [x] Loading and compiling modules
 [x] Getting help and accessing documentation within IEx
-[x] Using Erlang from Elixir
-[x] Inspecting your system in IEx
-[x] Inspecting your system with Observer
-[x] Creating a simple application
-[x] Managing dependencies
-[x] Generating a supervised application
-[x] Generating umbrella applications
-[x] Managing application configuration
-[x] Creating custom Mix tasks
+[ ] Using Erlang from Elixir
+[ ] Inspecting your system in IEx
+[ ] Inspecting your system with Observer
+[ ] Creating a simple application
+[ ] Managing dependencies
+[ ] Generating a supervised application
+[ ] Generating umbrella applications
+[ ] Managing application configuration
+[ ] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
-[x] Understanding immutability
-[x] Adding and subtracting lists
-[x] Combining tuples into a list
-[x] Creating and manipulating keyword lists
-[x] Using pattern matching
-[x] Pattern matching an HTTPoison response
-[x] Creating a key/value store with a map
+[ ] Understanding immutability
+[ ] Adding and subtracting lists
+[ ] Combining tuples into a list
+[ ] Creating and manipulating keyword lists
+[ ] Using pattern matching
+[ ] Pattern matching an HTTPoison response
+[ ] Creating a key/value store with a map
 [ ] Mapping and reducing enumerables
 [ ] Generating lazy (even infinite) sequences
 [ ] Streaming a file as a resource
