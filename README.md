@@ -28,7 +28,7 @@ Table of Contents
 [x] Creating a simple application
 [x] Managing dependencies
 [x] Generating a supervised application
-[ ] Generating umbrella applications
+[x] Generating umbrella applications
 [ ] Managing application configuration
 [ ] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
