@@ -35,7 +35,7 @@ Table of Contents
 [x] Understanding immutability
 [x] Adding and subtracting lists
 [x] Combining tuples into a list
-[ ] Creating and manipulating keyword lists
+[x] Creating and manipulating keyword lists
 [ ] Using pattern matching
 [ ] Pattern matching an HTTPoison response
 [ ] Creating a key/value store with a map
