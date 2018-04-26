@@ -32,9 +32,9 @@ Table of Contents
 [x] Managing application configuration
 [x] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
-[ ] Understanding immutability
-[ ] Adding and subtracting lists
-[ ] Combining tuples into a list
+[x] Understanding immutability
+[x] Adding and subtracting lists
+[x] Combining tuples into a list
 [ ] Creating and manipulating keyword lists
 [ ] Using pattern matching
 [ ] Pattern matching an HTTPoison response
