@@ -36,8 +36,8 @@ Table of Contents
 [x] Adding and subtracting lists
 [x] Combining tuples into a list
 [x] Creating and manipulating keyword lists
-[ ] Using pattern matching
-[ ] Pattern matching an HTTPoison response
+[x] Using pattern matching
+[x] Pattern matching an HTTPoison response
 [ ] Creating a key/value store with a map
 [ ] Mapping and reducing enumerables
 [ ] Generating lazy (even infinite) sequences
