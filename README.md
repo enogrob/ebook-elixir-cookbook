@@ -38,10 +38,10 @@ Table of Contents
 [x] Creating and manipulating keyword lists
 [x] Using pattern matching
 [x] Pattern matching an HTTPoison response
-[ ] Creating a key/value store with a map
-[ ] Mapping and reducing enumerables
-[ ] Generating lazy (even infinite) sequences
-[ ] Streaming a file as a resource
+[x] Creating a key/value store with a map
+[x] Mapping and reducing enumerables
+[x] Generating lazy (even infinite) sequences
+[x] Streaming a file as a resource
 3: STRINGS AND BINARIES
 [ ] Introduction
 [ ] Joining strings
