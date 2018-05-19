@@ -43,16 +43,16 @@ Table of Contents
 [x] Generating lazy (even infinite) sequences
 [x] Streaming a file as a resource
 3: STRINGS AND BINARIES
-[ ] Introduction
-[ ] Joining strings
-[ ] Splitting strings
-[ ] Replacing string codepoints with patterns
-[ ] Slicing strings with ranges
-[ ] Using regular expressions
-[ ] Combining operations with the |> operator
-[ ] Creating a word list
-[ ] Determining the word frequency in a text
-[ ] Reading and writing metadata from MP3 files
+[x] Introduction
+[x] Joining strings
+[x] Splitting strings
+[x] Replacing string codepoints with patterns
+[x] Slicing strings with ranges
+[x] Using regular expressions
+[x] Combining operations with the |> operator
+[x] Creating a word list
+[x] Determining the word frequency in a text
+[x] Reading and writing metadata from MP3 files
 4: MODULES AND FUNCTIONS
 [ ] Introduction
 [ ] Namespacing modules
