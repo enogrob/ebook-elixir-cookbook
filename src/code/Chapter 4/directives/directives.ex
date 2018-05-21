@@ -2,7 +2,7 @@ defmodule Directives do
   @col  [1,2,3]
   @name "demo"
 
-  # require directive
+  require RequireMe
 
   # alias directive module scope
   alias String, as: S

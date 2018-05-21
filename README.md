@@ -54,15 +54,15 @@ Table of Contents
 [x] Determining the word frequency in a text
 [x] Reading and writing metadata from MP3 files
 4: MODULES AND FUNCTIONS
-[ ] Introduction
-[ ] Namespacing modules
-[ ] Using module attributes as constants
-[ ] Enforcing behaviors
-[ ] Documenting modules
-[ ] Using module directives
-[ ] Using a module in the scripted mode
-[ ] Defining functions with default arguments
-[ ] Using guard clauses and pattern matching in function definitions
+[x] Introduction
+[x] Namespacing modules
+[x] Using module attributes as constants
+[x] Enforcing behaviors
+[x] Documenting modules
+[x] Using module directives
+[x] Using a module in the scripted mode
+[x] Defining functions with default arguments
+[x] Using guard clauses and pattern matching in function definitions
 5: PROCESSES AND NODES
 [ ] Introduction
 [ ] Sending messages between processes
