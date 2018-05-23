@@ -64,16 +64,16 @@ Table of Contents
 [x] Defining functions with default arguments
 [x] Using guard clauses and pattern matching in function definitions
 5: PROCESSES AND NODES
-[ ] Introduction
-[ ] Sending messages between processes
-[ ] Making code run on all available CPUs
-[ ] Using tasks to perform multiple concurrent computations
-[ ] Creating a stateful server process (messages with counters)
-[ ] Using agents as an abstraction around states
-[ ] Using an ETS table to share the state
-[ ] Creating named nodes
-[ ] Connecting nodes
-[ ] Executing code in a different node
+[x] Introduction
+[x] Sending messages between processes
+[x] Making code run on all available CPUs
+[x] Using tasks to perform multiple concurrent computations
+[x] Creating a stateful server process (messages with counters)
+[x] Using agents as an abstraction around states
+[x] Using an ETS table to share the state
+[x] Creating named nodes
+[x] Connecting nodes
+[x] Executing code in a different node
 6: OTP – OPEN TELECOM PLATFORM
 [ ] Introduction
 [ ] Implementing a GenServer
