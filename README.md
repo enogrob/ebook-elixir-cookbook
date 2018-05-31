@@ -75,11 +75,11 @@ Table of Contents
 [x] Connecting nodes
 [x] Executing code in a different node
 6: OTP – OPEN TELECOM PLATFORM
-[ ] Introduction
-[ ] Implementing a GenServer
-[ ] Expanding our server
-[ ] Creating a supervisor
-[ ] Using Observer to inspect supervisors and processes
+[x] Introduction
+[x] Implementing a GenServer
+[x] Expanding our server
+[x] Creating a supervisor
+[x] Using Observer to inspect supervisors and processes
 [ ] Handling errors and managing exceptions
 [ ] Packaging and releasing an OTP application
 [ ] Deploying applications and updating a running system
