@@ -80,9 +80,9 @@ Table of Contents
 [x] Expanding our server
 [x] Creating a supervisor
 [x] Using Observer to inspect supervisors and processes
-[ ] Handling errors and managing exceptions
-[ ] Packaging and releasing an OTP application
-[ ] Deploying applications and updating a running system
+[x] Handling errors and managing exceptions
+[x] Packaging and releasing an OTP application
+[x] Deploying applications and updating a running system
 7: COWBOY AND PHOENIX
 [ ] Introduction
 [ ] Setting up Cowboy

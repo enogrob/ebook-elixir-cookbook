@@ -1,0 +1,2 @@
+%{"conform": {:hex, :conform, "0.10.5", "6a83455990b2f4c6e98992172a635c61760b48a668e3082c6fd64ffcf12dc771", [:mix], [], "hexpm"},
+  "exrm": {:hex, :exrm, "0.14.13", "540ad26d2bf6b86d1a1880571fc8f9ef58e6c02b07552e07b436d3e9a7a6a5a2", [:mix], [{:conform, "~> 0.10.5", [hex: :conform, repo: "hexpm", optional: false]}], "hexpm"}}

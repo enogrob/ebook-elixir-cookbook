@@ -1,0 +1,12 @@
+{release,{"release_me","0.0.2"},
+         {erts,"6.3"},
+         [{kernel,"3.1"},
+          {stdlib,"2.3"},
+          {crypto,"3.4.2"},
+          {compiler,"5.0.3"},
+          {syntax_tools,"1.6.17"},
+          {elixir,"1.0.0"},
+          {logger,"1.0.0"},
+          {release_me,"0.0.2"},
+          {iex,"1.0.0"},
+          {sasl,"2.4.1"}]}. 

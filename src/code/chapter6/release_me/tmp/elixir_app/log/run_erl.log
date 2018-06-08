@@ -1,0 +1,8 @@
+run_erl [23459] Fri Jun  8 02:55:38 2018
+Args before exec of shell:
+run_erl [23459] Fri Jun  8 02:55:38 2018
+argv[0] = sh
+run_erl [23459] Fri Jun  8 02:55:38 2018
+argv[1] = -c
+run_erl [23459] Fri Jun  8 02:55:38 2018
+argv[2] = exec "/Users/enogrob/THINGS_HOME/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/tmp/elixir_app/bin/release_me" "console"

@@ -1,0 +1,11 @@
+{"0.0.2",
+ [{"0.0.1",
+   [{load_module,'Elixir.ReleaseMe'},
+    {update,'Elixir.ReleaseMe.ConnectionTracker',infinity,
+            {advanced,[]},
+            brutal_purge,brutal_purge,[]}]}],
+ [{"0.0.1",
+   [{update,'Elixir.ReleaseMe.ConnectionTracker',infinity,
+            {advanced,[]},
+            brutal_purge,brutal_purge,[]},
+    {load_module,'Elixir.ReleaseMe'}]}]}.

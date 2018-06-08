@@ -1,0 +1,16 @@
+
+=====
+===== LOGGING STARTED Fri Jun  8 02:31:38 -03 2018
+=====
+Exec: /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/erts-6.3/bin/erlexec -boot /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/releases/0.0.1/release_me -boot_var ERTS_LIB_DIR /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/erts-6.3/../lib -env ERL_LIBS /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/lib -config /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/releases/0.0.1/sys.config -pa /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/lib/consolidated -args_file /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me/releases/0.0.1/vm.args -user Elixir.IEx.CLI -extra --no-halt +iex -- console
+Root: /Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me
+/Users/enogrob/Things/Projects/ebook-elixir-cookbook/src/code/chapter6/release_me/rel/release_me
+Erlang/OTP 17 [erts-6.3] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false]
+
+Enabled docsh from: /Users/enogrob/THINGS_HOME/Today/docsh
+Call h(docsh) for interactive help.
+
+Interactive Elixir (1.0.0) - press Ctrl+C to exit (type h() ENTER for help)
+iex(release_me@127.0.0.1)1>                             iex(release_me@127.0.0.1)1> {:ok, pid} = ReleaseMe.ConnectionTracker.start_link
+{:ok, #PID<0.77.0>}
+iex(release_me@127.0.0.1)2> 
