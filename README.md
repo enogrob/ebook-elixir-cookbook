@@ -84,10 +84,10 @@ Table of Contents
 [x] Packaging and releasing an OTP application
 [x] Deploying applications and updating a running system
 7: COWBOY AND PHOENIX
-[ ] Introduction
-[ ] Setting up Cowboy
-[ ] Serving static files
-[ ] Implementing a websocket handler
+[x] Introduction
+[x] Setting up Cowboy
+[x] Serving static files
+[x] Implementing a websocket handler
 [ ] Creating a Phoenix application
 [ ] Defining routes
 [ ] Creating a controller
