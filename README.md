@@ -88,7 +88,7 @@ Table of Contents
 [x] Setting up Cowboy
 [x] Serving static files
 [x] Implementing a websocket handler
-[ ] Creating a Phoenix application
+[x] Creating a Phoenix application
 [ ] Defining routes
 [ ] Creating a controller
 [ ] Creating views and templates
