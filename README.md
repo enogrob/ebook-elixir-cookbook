@@ -21,74 +21,74 @@ Table of Contents
 [x] Introduction
 [x] Using the terminal to prototype and test ideas
 [x] Loading and compiling modules
-[x] Getting help and accessing documentation within IEx
-[x] Using Erlang from Elixir
-[x] Inspecting your system in IEx
-[x] Inspecting your system with Observer
-[x] Creating a simple application
-[x] Managing dependencies
-[x] Generating a supervised application
-[x] Generating umbrella applications
-[x] Managing application configuration
-[x] Creating custom Mix tasks
+[ ] Getting help and accessing documentation within IEx
+[ ] Using Erlang from Elixir
+[ ] Inspecting your system in IEx
+[ ] Inspecting your system with Observer
+[ ] Creating a simple application
+[ ] Managing dependencies
+[ ] Generating a supervised application
+[ ] Generating umbrella applications
+[ ] Managing application configuration
+[ ] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
-[x] Understanding immutability
-[x] Adding and subtracting lists
-[x] Combining tuples into a list
-[x] Creating and manipulating keyword lists
-[x] Using pattern matching
-[x] Pattern matching an HTTPoison response
-[x] Creating a key/value store with a map
-[x] Mapping and reducing enumerables
-[x] Generating lazy (even infinite) sequences
-[x] Streaming a file as a resource
+[ ] Understanding immutability
+[ ] Adding and subtracting lists
+[ ] Combining tuples into a list
+[ ] Creating and manipulating keyword lists
+[ ] Using pattern matching
+[ ] Pattern matching an HTTPoison response
+[ ] Creating a key/value store with a map
+[ ] Mapping and reducing enumerables
+[ ] Generating lazy (even infinite) sequences
+[ ] Streaming a file as a resource
 3: STRINGS AND BINARIES
-[x] Introduction
-[x] Joining strings
-[x] Splitting strings
-[x] Replacing string codepoints with patterns
-[x] Slicing strings with ranges
-[x] Using regular expressions
-[x] Combining operations with the |> operator
-[x] Creating a word list
-[x] Determining the word frequency in a text
-[x] Reading and writing metadata from MP3 files
+[ ] Introduction
+[ ] Joining strings
+[ ] Splitting strings
+[ ] Replacing string codepoints with patterns
+[ ] Slicing strings with ranges
+[ ] Using regular expressions
+[ ] Combining operations with the |> operator
+[ ] Creating a word list
+[ ] Determining the word frequency in a text
+[ ] Reading and writing metadata from MP3 files
 4: MODULES AND FUNCTIONS
-[x] Introduction
-[x] Namespacing modules
-[x] Using module attributes as constants
-[x] Enforcing behaviors
-[x] Documenting modules
-[x] Using module directives
-[x] Using a module in the scripted mode
-[x] Defining functions with default arguments
-[x] Using guard clauses and pattern matching in function definitions
+[ ] Introduction
+[ ] Namespacing modules
+[ ] Using module attributes as constants
+[ ] Enforcing behaviors
+[ ] Documenting modules
+[ ] Using module directives
+[ ] Using a module in the scripted mode
+[ ] Defining functions with default arguments
+[ ] Using guard clauses and pattern matching in function definitions
 5: PROCESSES AND NODES
-[x] Introduction
-[x] Sending messages between processes
-[x] Making code run on all available CPUs
-[x] Using tasks to perform multiple concurrent computations
-[x] Creating a stateful server process (messages with counters)
-[x] Using agents as an abstraction around states
-[x] Using an ETS table to share the state
-[x] Creating named nodes
-[x] Connecting nodes
-[x] Executing code in a different node
+[ ] Introduction
+[ ] Sending messages between processes
+[ ] Making code run on all available CPUs
+[ ] Using tasks to perform multiple concurrent computations
+[ ] Creating a stateful server process (messages with counters)
+[ ] Using agents as an abstraction around states
+[ ] Using an ETS table to share the state
+[ ] Creating named nodes
+[ ] Connecting nodes
+[ ] Executing code in a different node
 6: OTP – OPEN TELECOM PLATFORM
-[x] Introduction
-[x] Implementing a GenServer
-[x] Expanding our server
-[x] Creating a supervisor
-[x] Using Observer to inspect supervisors and processes
-[x] Handling errors and managing exceptions
-[x] Packaging and releasing an OTP application
-[x] Deploying applications and updating a running system
+[ ] Introduction
+[ ] Implementing a GenServer
+[ ] Expanding our server
+[ ] Creating a supervisor
+[ ] Using Observer to inspect supervisors and processes
+[ ] Handling errors and managing exceptions
+[ ] Packaging and releasing an OTP application
+[ ] Deploying applications and updating a running system
 7: COWBOY AND PHOENIX
-[x] Introduction
-[x] Setting up Cowboy
-[x] Serving static files
-[x] Implementing a websocket handler
-[x] Creating a Phoenix application
+[ ] Introduction
+[ ] Setting up Cowboy
+[ ] Serving static files
+[ ] Implementing a websocket handler
+[ ] Creating a Phoenix application
 [ ] Defining routes
 [ ] Creating a controller
 [ ] Creating views and templates
