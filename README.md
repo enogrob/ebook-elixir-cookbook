@@ -21,7 +21,7 @@ Table of Contents
 [x] Introduction
 [x] Using the terminal to prototype and test ideas
 [x] Loading and compiling modules
-[ ] Getting help and accessing documentation within IEx
+[x] Getting help and accessing documentation within IEx
 [ ] Using Erlang from Elixir
 [ ] Inspecting your system in IEx
 [ ] Inspecting your system with Observer
