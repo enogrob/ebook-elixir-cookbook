@@ -23,7 +23,7 @@ Table of Contents
 [x] Loading and compiling modules
 [x] Getting help and accessing documentation within IEx
 [x] Using Erlang from Elixir
-[ ] Inspecting your system in IEx
+[x] Inspecting your system in IEx
 [ ] Inspecting your system with Observer
 [ ] Creating a simple application
 [ ] Managing dependencies
