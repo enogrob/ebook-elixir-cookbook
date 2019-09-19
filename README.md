@@ -24,7 +24,7 @@ Table of Contents
 [x] Getting help and accessing documentation within IEx
 [x] Using Erlang from Elixir
 [x] Inspecting your system in IEx
-[ ] Inspecting your system with Observer
+[x] Inspecting your system with Observer
 [ ] Creating a simple application
 [ ] Managing dependencies
 [ ] Generating a supervised application
