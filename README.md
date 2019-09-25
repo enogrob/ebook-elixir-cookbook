@@ -25,8 +25,8 @@ Table of Contents
 [x] Using Erlang from Elixir
 [x] Inspecting your system in IEx
 [x] Inspecting your system with Observer
-[ ] Creating a simple application
-[ ] Managing dependencies
+[x] Creating a simple application
+[x] Managing dependencies
 [ ] Generating a supervised application
 [ ] Generating umbrella applications
 [ ] Managing application configuration
