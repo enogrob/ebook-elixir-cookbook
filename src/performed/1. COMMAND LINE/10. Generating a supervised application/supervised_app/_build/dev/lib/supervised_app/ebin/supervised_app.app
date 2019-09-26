@@ -1,0 +1,9 @@
+{application,supervised_app,
+             [{applications,[kernel,stdlib,elixir,logger]},
+              {description,"supervised_app"},
+              {modules,['Elixir.SupervisedApp',
+                        'Elixir.SupervisedApp.Application']},
+              {registered,[]},
+              {vsn,"0.1.0"},
+              {extra_applications,[logger]},
+              {mod,{'Elixir.SupervisedApp.Application',[]}}]}.
