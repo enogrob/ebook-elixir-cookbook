@@ -27,8 +27,8 @@ Table of Contents
 [x] Inspecting your system with Observer
 [x] Creating a simple application
 [x] Managing dependencies
-[ ] Generating a supervised application
-[ ] Generating umbrella applications
+[x] Generating a supervised application
+[x] Generating umbrella applications
 [ ] Managing application configuration
 [ ] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
