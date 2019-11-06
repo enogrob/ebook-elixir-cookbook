@@ -29,8 +29,8 @@ Table of Contents
 [x] Managing dependencies
 [x] Generating a supervised application
 [x] Generating umbrella applications
-[ ] Managing application configuration
-[ ] Creating custom Mix tasks
+[x] Managing application configuration
+[x] Creating custom Mix tasks
 2: DATA TYPES AND STRUCTURES
 [ ] Understanding immutability
 [ ] Adding and subtracting lists
