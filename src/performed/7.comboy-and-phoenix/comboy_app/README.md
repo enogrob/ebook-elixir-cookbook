@@ -1,4 +1,0 @@
-ComboyApp
-=========
-
-** TODO: Add description **

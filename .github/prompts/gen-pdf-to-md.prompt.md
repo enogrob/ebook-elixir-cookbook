@@ -1,7 +1,15 @@
 ---
 agent: 'agent'
 ---
+
 Convert every PDF file in #folder:src to Markdown.
+
+File search guidance for agents:
+- When searching for PDF files, always use a pattern that matches files with spaces and special characters, e.g. `ls -l src/*.pdf`.
+- Ensure your file search logic or script is robust to handle filenames with spaces or special characters (e.g. quoting patterns, not splitting on spaces).
+- If using a shell or script, always quote the pattern: "src/*.pdf" or use: find src -name "*.pdf"
+- Always run the search from the project root unless otherwise specified.
+
 
 Requirements:
 1. Preserve the original base filename; only change extension to `.md`.
@@ -29,3 +37,5 @@ Output quality checklist (must be true before writing file):
 - Headings rendered with `##` / `###` etc. consistently.
 
 If multiple PDFs exist, repeat the process for each.
+
+If no PDF files are found, double-check your file search logic and working directory. Ensure that files with spaces or special characters in their names are not skipped.
