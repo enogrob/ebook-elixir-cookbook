@@ -10,12 +10,34 @@ This book is a set of recipes grouped by topic that acts as a good reference to 
 
 ## Contents
 
-- [1 Command Line]()
-- [2 Data Type and Structures]()
-- [3 Strings and Binaries]()
-- [4 Modules and Functions]()
-- [5 Processes and Nodes]()
-- [6 OTP – Open Telecom Platform]()
-- [7 Cowboy and Phoenix]()
-- [8 Interactions]()
+- [1 Command Line](contents/chapter-01-command-line.md)
+- [2 Data Type and Structures](contents/chapter-02-data-type-and-structures.md)
+- [3 Strings and Binaries](contents/chapter-03-strings-and-binaries.md)
+- [4 Modules and Functions](contents/chapter-04-modules-and-functions.md)
+- [5 Processes and Nodes](contents/chapter-05-processes-and-nodes.md)
+- [6 OTP – Open Telecom Platform](contents/chapter-06-otp-open-telecom-platform.md)
+- [7 Cowboy and Phoenix](contents/chapter-07-cowboy-and-phoenix.md)
+- [8 Interactions](contents/chapter-08-interactions.md)
+
+## Slides
+
+- [1 Command Line](slides/chapter-01-command-line.md)
+- [2 Data Type and Structures](slides/chapter-02-data-type-and-structures.md)
+- [3 Strings and Binaries](slides/chapter-03-strings-and-binaries.md)
+- [4 Modules and Functions](slides/chapter-04-modules-and-functions.md)
+- [5 Processes and Nodes](slides/chapter-05-processes-and-nodes.md)
+- [6 OTP – Open Telecom Platform](slides/chapter-06-otp-open-telecom-platform.md)
+- [7 Cowboy and Phoenix](slides/chapter-07-cowboy-and-phoenix.md)
+- [8 Interactions](slides/chapter-08-interactions.md)
+
+## Flashcards
+
+- [1 Command Line](flashcards/chapter-01-command-line.md)
+- [2 Data Type and Structures](flashcards/chapter-02-data-type-and-structures.md)
+- [3 Strings and Binaries](flashcards/chapter-03-strings-and-binaries.md)
+- [4 Modules and Functions](flashcards/chapter-04-modules-and-functions.md)
+- [5 Processes and Nodes](flashcards/chapter-05-processes-and-nodes.md)
+- [6 OTP – Open Telecom Platform](flashcards/chapter-06-otp-open-telecom-platform.md)
+- [7 Cowboy and Phoenix](flashcards/chapter-07-cowboy-and-phoenix.md)
+- [8 Interactions](flashcards/chapter-08-interactions.md)
 
