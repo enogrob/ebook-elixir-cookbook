@@ -1,466 +1,184 @@
+# Chapter 01: Command Line
 
-## Chapter 1: Command Line
+## Summary
 
-This chapter covers the following recipes:
+Chapter 1 introduces the command-line tools essential for Elixir development. It covers Interactive Elixir (IEx), the REPL environment for immediate code evaluation and prototyping, and Mix, the build tool for creating, compiling, and managing Elixir projects. The chapter demonstrates how to use IEx for testing ideas, defining modules and functions interactively, and leveraging Mix for project scaffolding and custom task creation. These command-line tools form the foundation of the Elixir development workflow, enabling developers to efficiently prototype, test, and build applications.
 
-- **Interactive Elixir (IEx):**
-  - Using the terminal to prototype and test ideas
-  - Loading and compiling modules
-  - Getting help and accessing documentation within IEx
-  - Using Erlang from Elixir
-  - Inspecting your system in IEx
-  - Inspecting your system with Observer
+## Concepts Map
 
-- **Mix:**
-  - Creating a simple application
-  - Managing dependencies
-  - Generating a supervised application
-  - Generating umbrella applications
-  - Managing application configuration
-  - Creating custom Mix tasks
+```mermaid
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#E8F4FD','primaryBorderColor':'#4A90E2','primaryTextColor':'#2C3E50','secondaryColor':'#F0F8E8','tertiaryColor':'#FDF2E8','quaternaryColor':'#F8E8F8','lineColor':'#5D6D7E','fontFamily':'Inter,Segoe UI,Arial'}}}%%
+graph TB
+    A[Command Line Tools] --> B[IEx - Interactive Elixir]
+    A --> C[Mix - Build Tool]
+    
+    B --> D[REPL Environment]
+    B --> E[Code Prototyping]
+    B --> F[Expression Evaluation]
+    B --> G[Module Definition]
+    
+    C --> H[Project Creation]
+    C --> I[Compilation]
+    C --> J[Testing]
+    C --> K[Dependency Management]
+    C --> L[Custom Tasks]
+    
+    D --> M[Immediate Feedback]
+    E --> N[Anonymous Functions]
+    H --> O[mix new]
+    L --> P[Task Definition]
+    
+    style A fill:#4A90E2,color:#fff
+    style B fill:#E8F4FD
+    style C fill:#F0F8E8
+```
 
----
+## Key Concepts
 
-### Introduction
+- **IEx (Interactive Elixir)**: A REPL environment for immediate code evaluation and experimentation without compilation
+- **REPL**: Read-Eval-Print Loop that allows interactive programming and testing
+- **Mix**: Elixir's build tool for project creation, compilation, testing, and dependency management
+- **Expression Evaluation**: Immediate execution and result display of Elixir code in IEx
+- **Anonymous Functions**: Functions defined inline without names using `fn` syntax
+- **Module Definition**: Creating modules interactively in IEx without saving to files
+- **Project Scaffolding**: Using Mix to generate project structure and boilerplate code
+- **Custom Mix Tasks**: Defining project-specific commands using Mix's task framework
+- **Dependency Management**: Handling external libraries and packages through Mix
+- **Command-Line Interface**: Text-based interface for interacting with Elixir tools and applications
 
-The command line is the preferred way to create and interact with Elixir applications, inspect running systems, and prototype ideas.
+## Quiz (20260204_120000)
 
-**Interactive Elixir (IEx)** allows immediate evaluation of any expression, and it is possible to define modules directly without saving them to a file.  
-**Mix** is a build tool that provides tasks to create, compile, and test projects, and handle dependencies. You can also define custom tasks with Mix.
+1. What is IEx in Elixir?
+   - [ ] A. An Integrated Development Environment
+   - [x] B. Interactive Elixir - a REPL environment
+   - [ ] C. A debugging tool
+   - [ ] D. A web framework
 
----
+2. How do you start IEx from the command line?
+   - [ ] A. `elixir start`
+   - [x] B. `iex`
+   - [ ] C. `mix iex`
+   - [ ] D. `elixir -i`
 
-### Using the terminal to prototype and test ideas
+3. What does REPL stand for?
+   - [ ] A. Real Execution Program Loop
+   - [x] B. Read-Eval-Print Loop
+   - [ ] C. Runtime Evaluation Programming Language
+   - [ ] D. Recursive Expression Processing Logic
 
-Elixir provides an REPL called IEx. It allows you to test code and even create entire modules without compiling a source file.
+4. What is Mix primarily used for?
+   - [ ] A. Mixing different programming languages
+   - [x] B. Project creation, compilation, and management
+   - [ ] C. Database migrations only
+   - [ ] D. Web server configuration
 
-**Getting ready**
+5. How do you define an anonymous function in Elixir?
+   - [ ] A. `function(a, b) -> a + b end`
+   - [x] B. `fn(a, b) -> a + b end`
+   - [ ] C. `lambda a, b: a + b`
+   - [ ] D. `def anonymous(a, b), do: a + b`
 
-- Install Elixir (see: http://elixir-lang.org/install.html).
-- Install Erlang (the only prerequisite).
+6. How do you exit IEx?
+   - [ ] A. Type `exit`
+   - [ ] B. Press Ctrl + D
+   - [x] C. Press Ctrl + C twice
+   - [ ] D. Type `quit()`
 
-**How to do it…**
+7. What command creates a new Mix project?
+   - [ ] A. `mix create project_name`
+   - [x] B. `mix new project_name`
+   - [ ] C. `elixir new project_name`
+   - [ ] D. `mix init project_name`
 
-1. Start IEx:
-	```
-	iex
-	```
-2. Type some expressions:
-	```
-	iex(1)> a = 2 + 2
-	4
+8. Can you define entire modules directly in IEx?
+   - [x] A. Yes, without saving to files
+   - [ ] B. No, modules must be in files
+   - [ ] C. Only simple modules
+   - [ ] D. Only with special flags
 
-	iex(2)> b = a * a
-	16
+9. What is a custom Mix task?
+   - [ ] A. A built-in Mix command
+   - [x] B. A user-defined command specific to a project
+   - [ ] C. A task that runs automatically
+   - [ ] D. A system-level command
 
-	iex(3)> a + b
-	20
-	```
-3. Define an anonymous function:
-	```
-	iex(4)> sum = fn(a, b) -> a + b end
-	#Function<...>
-	```
-4. Invoke the function:
-	```
-	iex(5)> sum.(1, 2)
-	3
-	```
-5. Quit IEx: Press `Ctrl + C` twice.
+10. What advantage does IEx provide over editing and compiling files?
+    - [ ] A. Better performance
+    - [ ] B. More features
+    - [x] C. Immediate feedback without compilation overhead
+    - [ ] D. Automatic code completion
 
-**How it works…**
+### Answers
+1. B, 2. B, 3. B, 4. B, 5. B, 6. C, 7. B, 8. A, 9. B, 10. C
 
-- IEx evaluates expressions as they are typed, allowing instant feedback.
-- The `=` operator is a pattern matching operator, not assignment.
-- Anonymous functions are called with a dot: `sum.(1, 2)`.
+## Challenge
 
-**There's more…**
+**Task**: Create a custom Mix task that displays information about your Elixir installation and system.
 
-- You can define modules inside IEx.
+Create a Mix task called `mix info` that when executed, displays:
+1. The Elixir version
+2. The Erlang/OTP version
+3. The current working directory
+4. A list of all Mix tasks available
 
----
+**Hint**: Mix tasks are defined in the `lib/mix/tasks/` directory and use the `Mix.Task` behavior.
 
-### Loading and compiling modules
+### Answer
 
-You can load code from source files into an IEx session.
+1. Create a new Mix project:
+```bash
+mix new system_info
+cd system_info
+```
 
-**Getting ready**
-
-Suppose you have these files:
-
-`greeter.ex`
+2. Create the file `lib/mix/tasks/info.ex`:
 ```elixir
-defmodule Greeter do
-  def greet(name \\ "you") do
-	 "Hello #{name} !"
+defmodule Mix.Tasks.Info do
+  use Mix.Task
+
+  @shortdoc "Displays system and Elixir information"
+  
+  @moduledoc """
+  Displays information about the Elixir installation and system.
+  
+  ## Usage
+  
+      mix info
+  """
+  
+  def run(_) do
+    IO.puts("\n=== System Information ===\n")
+    
+    # Elixir version
+    IO.puts("Elixir version: #{System.version()}")
+    
+    # Erlang/OTP version
+    otp_release = :erlang.system_info(:otp_release) |> to_string()
+    IO.puts("Erlang/OTP version: #{otp_release}")
+    
+    # Current working directory
+    cwd = File.cwd!()
+    IO.puts("Current directory: #{cwd}")
+    
+    # Available Mix tasks
+    IO.puts("\n=== Available Mix Tasks ===\n")
+    Mix.Task.load_all()
+    tasks = Mix.Task.all_modules()
+            |> Enum.map(&Mix.Task.task_name/1)
+            |> Enum.sort()
+    
+    Enum.each(tasks, fn task ->
+      IO.puts("  - mix #{task}")
+    end)
+    
+    IO.puts("")
   end
 end
 ```
 
-`echoer.ex`
-```elixir
-defmodule Echoer do
-  def echo(msg) do
-	 IO.puts "#{msg} ... #{msg} ...... #{msg}"
-  end
-end
+3. Run the task:
+```bash
+mix info
 ```
 
-**How to do it…**
-
-1. Start IEx:
-	```
-	iex
-	```
-2. Load the Greeter module:
-	```
-	iex(1)> c("greeter.ex")
-	[Greeter]
-	```
-3. Load the Echoer module:
-	```
-	iex(2)> c("echoer.ex")
-	[Echoer]
-	```
-4. Use the modules:
-	```
-	iex(3)> Greeter.greet("Me")
-	"Hello Me !"
-
-	iex(4)> Echoer.echo("hello")
-	hello ... hello ...... hello
-	:ok
-
-	iex(5)> Greeter.greet("Me") |> Echoer.echo
-	Hello Me ! ... Hello Me ! ...... Hello Me !
-	:ok
-	```
-
-**How it works…**
-
-- `c("file.ex")` loads and compiles the file.
-- Modules become available in the session.
-- The pipe operator (`|>`) feeds the output of the left operation as the first argument to the right.
-
-**There's more…**
-
-- You can use relative or full paths in `c("path/to/file.ex")`.
-
----
-
-### Getting help and accessing documentation within IEx
-
-Documentation is a first-class citizen in Elixir. IEx provides ways to access documentation and get help.
-
-**How to do it…**
-
-1. Enter `h` in IEx to see help options.
-2. Get info about a function:
-	```
-	iex> h(c/2)
-	```
-3. Access module documentation:
-	```
-	iex> h(Enum)
-	```
-4. Get info about a specific function:
-	```
-	iex> h(Enum.map)
-	```
-
-**How it works…**
-
-- Use `@moduledoc` and `@doc` in your modules/functions to provide documentation.
-- IEx parses and displays this documentation with the `h` helper.
-
-**There's more…**
-
-- Use `s/1` and `t/1` in IEx to get information on function specifications and types.
-
----
-
-### Using Erlang from Elixir
-
-Elixir code runs in the Erlang VM. You can invoke Erlang code from within Elixir.
-
-**How to do it…**
-
-1. Call an Erlang function:
-	```
-	iex(1)> :application.which_applications
-	```
-2. Get module info:
-	```
-	iex(2)> :erlang.module_info
-	```
-
-**How it works…**
-
-- Erlang modules are represented as atoms in Elixir.
-- Functions are invoked as `:module.function(args)`.
-
-**There's more…**
-
-- You can use Erlang libraries in Elixir applications.
-- Example: `List.last([1,2,3])` (Elixir) vs `:lists.last([1,2,3])` (Erlang).
-
----
-
-### Inspecting your system in IEx
-
-You can inspect the running VM using Erlang modules.
-
-**How to do it…**
-
-1. Get running applications:
-	```
-	iex(1)> :application.which_applications
-	```
-2. Get memory usage:
-	```
-	iex(2)> :erlang.memory
-	```
-3. Get memory usage for atoms:
-	```
-	iex(3)> :erlang.memory(:atom)
-	```
-
-**How it works…**
-
-- Erlang modules provide system inspection capabilities.
-
-**See also**
-
-- Use Observer (next recipe) for a GUI view.
-
----
-
-### Inspecting your system with Observer
-
-Observer is a GUI tool for inspecting the Erlang VM.
-
-**How to do it…**
-
-1. Start IEx.
-2. Start Observer:
-	```
-	iex(1)> :observer.start
-	```
-3. Use the GUI to inspect system stats, memory, applications, and process hierarchies.
-
----
-
-### Creating a simple application
-
-Use Mix to create a new Elixir application.
-
-**How to do it…**
-
-1. List available Mix tasks:
-	```
-	> mix help
-	```
-2. Generate a new application:
-	```
-	> mix new simple_app
-	```
-3. Start the app:
-	```
-	> cd simple_app
-	> iex -S mix
-	```
-4. Edit `lib/simple_app.ex`:
-	```elixir
-	defmodule SimpleApp do
-	  def greet do
-		 IO.puts "Hello from Simple App!"
-	  end
-	end
-	```
-5. Restart and test:
-	```
-	iex(1)> SimpleApp.greet
-	Hello from Simple App!
-	:ok
-	```
-
-**How it works…**
-
-- Mix is a build tool for Elixir, providing tasks for creating, managing, and running applications.
-
----
-
-### Managing dependencies
-
-Add dependencies to your application using Hex.
-
-**How to do it…**
-
-1. Generate a new app:
-	```
-	> mix new manage_deps
-	```
-2. Add a dependency in `mix.exs`:
-	```elixir
-	defp deps do
-	  [{:httpoison, "~> 0.4"}]
-	end
-	```
-3. Add to applications:
-	```elixir
-	def application do
-	  [applications: [:logger, :httpoison]]
-	end
-	```
-4. Fetch and compile dependencies:
-	```
-	> mix deps.get
-	> mix deps.compile
-	```
-5. Start your app:
-	```
-	> iex -S mix
-	```
-6. Test the dependency:
-	```
-	iex(1)> HTTPoison.get("http://www.google.com")
-	```
-
-**How it works…**
-
-- Dependencies are managed via Hex or GitHub.
-- Use `mix deps.get` and `mix deps.compile` to fetch and build them.
-
----
-
-### Generating a supervised application
-
-Generate an application with a supervision tree.
-
-**How to do it…**
-
-1. Generate with supervisor:
-	```
-	> mix new supervised_app --sup
-	```
-
-**How it works…**
-
-- The `--sup` flag adds a supervision tree and an application module callback.
-
----
-
-### Generating umbrella applications
-
-Umbrella applications group multiple apps together.
-
-**How to do it…**
-
-1. Generate umbrella:
-	```
-	> mix new --umbrella container
-	```
-2. Create sub-apps:
-	```
-	> cd container/apps
-	> mix new application_one
-	> mix new application_two
-	```
-3. Run tests at the umbrella or sub-app level.
-
-**How it works…**
-
-- Umbrella projects make it easy to manage multiple related applications.
-
----
-
-### Managing application configuration
-
-Configure your app for different environments.
-
-**How to do it…**
-
-1. Create a new app:
-	```
-	> mix new config_example
-	```
-2. Edit `config/config.exs`:
-	```elixir
-	use Mix.Config
-
-	config :config_example,
-	  message_one: "This is a shared message!"
-
-	import_config "#{Mix.env}.exs"
-	```
-3. Add `dev.exs`, `prod.exs`, and `test.exs` with environment-specific configs.
-4. Access config in your module:
-	```elixir
-	@message_one Application.get_env(:config_example, :message_one)
-	@message_two Application.get_env(:config_example, :message_two)
-	```
-5. Test in different environments:
-	```
-	> MIX_ENV=dev iex -S mix
-	> MIX_ENV=prod iex -S mix
-	> MIX_ENV=test iex -S mix
-	```
-
-**How it works…**
-
-- `import_config "#{Mix.env}.exs"` loads environment-specific configs.
-- Use `Application.get_env/2` to access config values.
-
----
-
-### Creating custom Mix tasks
-
-You can create your own Mix tasks.
-
-**How to do it…**
-
-1. Create `meminfo.ex`:
-	```elixir
-	defmodule Mix.Tasks.Meminfo do
-	  use Mix.Task
-	  @shortdoc "Get Erlang VM memory usage information"
-	  @moduledoc """
-	  A mix custom task that outputs some information regarding
-	  the Erlang VM memory usage
-	  """
-	  def run(_) do
-		 meminfo = :erlang.memory
-		 IO.puts """
-		 Total            #{meminfo[:total]}
-		 Processes        #{meminfo[:processes]}
-		 Processes (used) #{meminfo[:processes_used]}
-		 System           #{meminfo[:system]}
-		 Atom             #{meminfo[:atom]}
-		 Atom (used)      #{meminfo[:atom_used]}
-		 Binary           #{meminfo[:binary]}
-		 Code             #{meminfo[:code]}
-		 ETS              #{meminfo[:ets]}
-		 """
-	  end
-	end
-	```
-2. Compile:
-	```
-	elixirc meminfo.ex
-	```
-3. See the new task:
-	```
-	> mix help
-	```
-4. Run the task:
-	```
-	> mix meminfo
-	```
-
-**How it works…**
-
-- Custom Mix tasks are modules under `Mix.Tasks.*` with a `run/1` function.
-
----
-
-**End of Chapter 1**
+This will display comprehensive system information including Elixir and Erlang versions, the current directory, and all available Mix tasks.

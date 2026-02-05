@@ -1,34 +1,156 @@
 ---
 agent: 'agent'
 ---
-Generate a Marp presentation file in #folder:slides with the same name rules as specified in #prompt:gen-files.prompt.md for the content of the chapter # specified from the ebook located in #folder:src .
-Be brief and concise in the slides content, use bullet points when possible, code snippets when needed, and include relevant diagrams in Mermaid format where applicable use Visual Standards and Mermaid Theme Configuration below.
 
-**Visual Standards:**
-- Use pastel color themes compatible with both dark and light browser themes
-- Include relevant emojis for visual engagement and clarity
-- Organize complex diagrams using subgraphs for better readability
-- Size diagrams to fit A4 paper when printed (max width: 180mm)
-- Use consistent color coding across all diagrams
+## Generate Marp Presentation Slides for Elixir Cookbook Chapter
 
-**Mermaid Theme Configuration:**
+Create a Marp presentation file for a specific chapter from the "Elixir Cookbook" by Paulo A. Pereira. Source chapters are located in #folder:contents with additional code examples in #folder:src/code.
 
-Use this theme init block at the start of every Mermaid diagram:
+### Requirements:
 
+**Output Location & Naming:**
+- Create the file in the #folder:slides directory
+- Use the same filename format as specified in #prompt:gen-files.prompt.md
+- Format: `chapter-{number}-{title-with-hyphens}.md`
+- Example: For "Chapter 1: Why Elixir? Why Now?" create `chapter-1-why-elixir-why-now.md`
+
+**Input Parameter:**
+- Chapter number (required): The chapter number (1-8) to generate slides for
+
+**Chapters Overview:**
+1. Command Line - IEx and Mix tools
+2. Data Types and Structures - Immutability, pattern matching, lazy evaluation
+3. Strings and Binaries - String manipulation in Elixir
+4. Modules and Functions - Building blocks, directives, pattern matching
+5. Processes and Nodes - Concurrent programming and distribution
+6. OTP – Open Telecom Platform - GenServer, supervisors, and OTP constructs
+7. Cowboy and Phoenix - Web development, static files, websockets, Phoenix framework
+8. Interactions - OS commands, PostgreSQL, Redis, external systems
+
+**Marp Format Requirements:**
+
+1. **Frontmatter** - Include Marp YAML configuration:
+   ```markdown
+   ---
+   marp: true
+   theme: default
+   class: invert
+   paginate: true
+   ---
+   ```
+
+2. **Slide Structure**:
+   - Title slide with chapter number and title
+   - Overview/outline slide
+   - Content slides organized by topics
+   - Summary/key takeaways slide
+   - Resources slide (if applicable)
+
+3. **Slide Separators**: Use `---` on separate lines to separate slides
+
+4. **Content Guidelines**:
+   - Be brief and concise - use bullet points for complex concepts
+   - Focus on practical recipes and their implementation
+   - Include code snippets demonstrating techniques (use code blocks with Elixir syntax highlighting)
+   - Keep text minimal (max 5-7 bullet points per slide)
+   - Use visual hierarchy with clear headings
+   - Highlight "Getting ready", "How to do it", and "How it works" sections from recipes
+   - Reference actual code examples from #folder:src/code when applicable
+
+5. **Slide Design Tips**:
+   - One main topic per slide
+   - Use emphasis (`**bold**`, `*italic*`) to highlight key terms
+   - Include section divider slides for major topics
+   - Use inline code formatting for syntax and concepts
+
+**Output Format Example:**
+```markdown
+---
+marp: true
+theme: default
+class: invert
+paginate: true
+---
+
+# Chapter 1: Command Line
+
+*Interactive Elixir and Mix Build Tool*
+
+---
+
+## Chapter Overview
+
+- Using IEx for prototyping
+- Loading and compiling modules
+- Getting help in IEx
+- Creating Mix applications
+- Managing dependencies
+- Creating custom Mix tasks
+
+---
+
+## Interactive Elixir (IEx)
+
+- **REPL**: Read-Eval-Print-Loop
+- Immediate code evaluation
+- Test ideas without compilation
+- Define modules on the fly
+- Access documentation inline
+
+---
+
+### Using IEx - Getting Started
+
+**Start IEx:**
+```bash
+$ iex
 ```
-%%{init: {
-  'theme':'base',
-  'themeVariables': {
-    'primaryColor':'#E8F4FD',
-    'primaryBorderColor':'#4A90E2',
-    'primaryTextColor':'#2C3E50',
-    'secondaryColor':'#F0F8E8',
-    'tertiaryColor':'#FDF2E8',
-    'quaternaryColor':'#F8E8F8',
-    'lineColor':'#5D6D7E',
-    'fontFamily':'Inter,Segoe UI,Arial'
-  }
-}}%%
-graph TB
-  %% Your diagram content here
+
+**Evaluate expressions:**
+```elixir
+iex(1)> a = 2 + 2
+4
+iex(2)> sum = fn(a, b) -> a + b end
+iex(3)> sum.(1, 2)
+3
+```
+
+---
+
+## Mix Build Tool
+
+- Project creation and management
+- Dependency handling
+- Compilation and testing
+- Custom task creation
+- Configuration management
+
+---
+
+### Creating a Mix Project
+
+**Simple application:**
+```bash
+$ mix new my_app
+```
+
+**Supervised application:**
+```bash
+$ mix new my_app --sup
+```
+
+**Umbrella application:**
+```bash
+$ mix new my_app --umbrella
+```
+
+---
+
+## Key Takeaways
+
+✓ IEx enables rapid prototyping  
+✓ Load modules without restarting  
+✓ Mix simplifies project management  
+✓ Custom tasks extend functionality  
+✓ Built-in documentation access
 ```

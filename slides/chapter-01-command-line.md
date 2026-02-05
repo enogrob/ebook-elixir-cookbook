@@ -1,191 +1,242 @@
-IOiiiiiiiiiiijjjji---
+---
 marp: true
-title: "Chapter 1: Command Line"
-description: "Essential Elixir command-line tools and techniques"
 theme: default
+class: invert
 paginate: true
 ---
 
-<!-- _cover: true -->
-
 # Chapter 1: Command Line
 
-- 🚀 Essential tools for Elixir developers
-- Run scripts, use IEx, compile, and manage projects
-- Boost productivity from the terminal
+*Interactive Elixir and Mix Build Tool*
 
 ---
 
-## Running Elixir Scripts
+## Chapter Overview
 
-- Save code in `.exs` files
-- Run with:
-	```sh
-	elixir my_script.exs
-	```
-- Output is printed to terminal
+- Using the terminal to prototype and test ideas
+- Loading and compiling modules in IEx
+- Getting help in IEx
+- Creating simple applications with Mix
+- Creating supervised applications
+- Managing dependencies
+- Creating custom Mix tasks
 
 ---
 
-### Example
+## Introduction
 
-```elixir
-IO.puts("Hello, Elixir!")
-```
+The command line is the **preferred way** to:
+- Create and interact with Elixir applications
+- Inspect running systems
+- Prototype ideas quickly
 
-```sh
-elixir hello.exs
-```
-
-_Output:_
-```
-Hello, Elixir!
-```
+**Two main tools:**
+- **IEx** - Interactive Elixir REPL
+- **Mix** - Build tool for projects
 
 ---
 
 ## Interactive Elixir (IEx)
 
-- Start with:
-	```sh
-	iex
-	```
-- Evaluate code interactively
-- Explore modules and test ideas
+**What is IEx?**
+- REPL: **R**ead-**E**val-**P**rint-**L**oop
+- Immediate evaluation of expressions
+- Define modules without saving to files
+- Similar to Ruby's IRB or Clojure's REPL
+
+**Why use IEx?**
+- Test code instantly
+- Experiment without compilation overhead
+- Get immediate feedback
 
 ---
 
-### IEx Example
+## Starting IEx
+
+**Getting ready:**
+- Elixir must be installed
+- Visit: `elixir-lang.org/install.html`
+- Erlang is the only prerequisite
+
+**How to start:**
+```bash
+$ iex
+```
+
+---
+
+## Evaluating Expressions in IEx
+
+**Basic arithmetic and variables:**
 
 ```elixir
-iex> 1 + 2
+iex(1)> a = 2 + 2
+4
+iex(2)> b = a * a
+16
+iex(3)> a + b
+20
+```
+
+**How it works:**
+- Expressions are evaluated as you type
+- Instant feedback without file editing
+- Variables persist within the session
+
+---
+
+## Anonymous Functions in IEx
+
+**Defining an anonymous function:**
+
+```elixir
+iex(5)> sum = fn(a, b) -> a + b end
+#Function<...>
+```
+
+**Invoking the function:**
+
+```elixir
+iex(6)> sum.(1, 2)
 3
-iex> String.upcase("elixir")
-"ELIXIR"
+```
+
+**Note:** Use the dot notation `.(args)` to call anonymous functions
+
+---
+
+## Exiting IEx
+
+**How to quit:**
+- Press **Ctrl + C** twice
+
+**Alternative:**
+- Type `System.halt()` or `System.stop()`
+
+---
+
+## Mix Build Tool
+
+**What is Mix?**
+- Build tool for Elixir projects
+- Provides tasks for common operations
+- Manages dependencies
+- Supports custom task creation
+
+**Core capabilities:**
+- Create projects
+- Compile code
+- Run tests
+- Handle dependencies
+
+---
+
+## Creating Simple Applications
+
+**Command:**
+```bash
+$ mix new my_app
+```
+
+**What it creates:**
+- Project directory structure
+- Configuration files
+- Basic module templates
+- Test framework setup
+- README.md
+
+**Project structure:**
+```
+my_app/
+  ├── lib/
+  ├── test/
+  ├── mix.exs
+  └── README.md
 ```
 
 ---
 
-## Running Scripts in IEx
+## Creating Supervised Applications
 
-- Load a script:
-	```elixir
-	iex> c("my_script.exs")
-	```
-- Or start IEx with a script:
-	```sh
-	iex my_script.exs
-	```
-- Access script context interactively
-
----
-
-## Command-Line Arguments
-
-- Access with `System.argv/0`
-- Example:
-	```elixir
-	IO.inspect(System.argv())
-	```
-- Run with arguments:
-	```sh
-	elixir my_script.exs foo bar
-	```
-	_Output:_
-	```
-	["foo", "bar"]
-	```
-
----
-
-## Compiling Elixir Files
-
-- Compile to `.beam` bytecode:
-	```sh
-	elixirc my_module.ex
-	```
-- Output: `Elixir.MyModule.beam` (current dir or `_build/`)
-
----
-
-## Running Code from the Command Line
-
-- Use `-e` for quick snippets:
-	```sh
-	elixir -e "IO.puts(1 + 2)"
-	```
-	_Output:_
-	```
-	3
-	```
-
----
-
-## Using Mix
-
-- Elixir’s build tool 🛠️
-- Create projects, manage deps, run tests
-
----
-
-### Creating a New Project
-
-```sh
-mix new my_app
+**Command:**
+```bash
+$ mix new my_app --sup
 ```
-- Generates project structure
+
+**What's different:**
+- Includes OTP application supervisor
+- Application callback module
+- Supervision tree ready
+- Better for production systems
+
+**Use when:**
+- Building fault-tolerant applications
+- Need process supervision
+- Creating long-running services
 
 ---
 
-### Running Tests
+## Managing Dependencies
 
-```sh
-mix test
+**In mix.exs:**
+```elixir
+defp deps do
+  [
+    {:httpoison, "~> 1.8"},
+    {:poison, "~> 5.0"}
+  ]
+end
 ```
-- Runs all tests in the project
 
----
-
-## Getting Help
-
-- Most commands support `--help`:
-	```sh
-	elixir --help
-	iex --help
-	mix --help
-	```
-- Shows usage and options
-
----
-
-## Elixir Command-Line Workflow
-
-```mermaid
-%%{init: {
-	'theme':'base',
-	'themeVariables': {
-		'primaryColor':'#E8F4FD',
-		'primaryBorderColor':'#4A90E2',
-		'primaryTextColor':'#2C3E50',
-		'secondaryColor':'#F0F8E8',
-		'tertiaryColor':'#FDF2E8',
-		'quaternaryColor':'#F8E8F8',
-		'lineColor':'#5D6D7E',
-		'fontFamily':'Inter,Segoe UI,Arial'
-	}
-}}%%
-graph TB
-	A[Write .exs/.ex files] --> B{Run or Compile?}
-	B -- Run --> C[elixir my_script.exs]
-	B -- Compile --> D[elixirc my_module.ex]
-	C --> E[IEx for interactive work]
-	D --> E
-	E --> F[Use Mix for projects]
+**Commands:**
+```bash
+$ mix deps.get      # Fetch dependencies
+$ mix deps.compile  # Compile dependencies
+$ mix deps.update   # Update dependencies
 ```
 
 ---
 
-# 🎉 Ready to Explore!
+## Custom Mix Tasks
 
-- You now know the basics of Elixir’s command-line tools
-- Experiment, build, and automate with confidence!
+**Why create custom tasks?**
+- Automate repetitive operations
+- Project-specific workflows
+- Extend Mix functionality
+
+**Example use cases:**
+- Display memory usage
+- Database migrations (Phoenix)
+- Code generation
+- Deployment scripts
+
+**Phoenix framework** provides many custom Mix tasks
+
+---
+
+## Key Takeaways
+
+✓ **IEx** enables rapid prototyping and testing
+✓ Define and test code **without compilation**
+✓ **Mix** simplifies project management
+✓ Create **simple** or **supervised** applications easily
+✓ Manage **dependencies** declaratively
+✓ Extend Mix with **custom tasks**
+✓ Command line is the **foundation** of Elixir workflow
+
+---
+
+## Resources
+
+**Official Documentation:**
+- IEx: `hexdocs.pm/iex`
+- Mix: `hexdocs.pm/mix`
+
+**Installation:**
+- `elixir-lang.org/install.html`
+
+**Getting Help in IEx:**
+```elixir
+iex> h String.split
+iex> i "hello"
+```
